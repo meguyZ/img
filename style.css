@@ -1,0 +1,143 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://link.ovez.shop/bg2.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.index-title {
+    background: linear-gradient(to right, #da4d4d, #da70d6); /* ไล่สีจากชมพูไปสีม่วง */
+    -webkit-background-clip: text; /* เพื่อให้ข้อความมีการใช้สีตามพื้นหลัง */
+    -webkit-text-fill-color: transparent; /* ให้ข้อความใช้สีจากพื้นหลัง */
+    text-align: center;
+    margin-bottom: 20px;
+    animation: rainbow 4s linear infinite alternate; /* ทำให้สีไล่เปลี่ยนไปมาตลอดเวลา จากซ้ายไปขวาและกลับมา */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Kanit', sans-serif;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #da4d4d, #ff69b4, #ff5100, #da70d6); /* ไล่สีเหมือนกับข้อความในคำถาม */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d8bfd8; /* สีม่วงอ่อน */
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.096);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    max-height: 100px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.upload-text {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ปรับสีของลิ้งก์ */
+.upload-text a {
+    color: red; /* สีของลิ้งก์ */
+    text-decoration: none; /* ไม่ให้มีเส้นใต้ข้อความลิ้งก์ */
+}
+
+/* ปรับสีของลิ้งก์เมื่อนำเมาส์ hover */
+.upload-text a:hover {
+    color: darkred; /* สีของลิ้งก์เมื่อ hover */
+}
+
+/* ปรับสีของปุ่มอัพโหลด */
+.label-for-file {
+    color: white; /* สีของตัวอักษร */
+}
+
+/* ปรับสีของปุ่มเมื่อนำเมาส์ hover หรือ focus */
+.label-for-file:hover,
+.label-for-file:focus {
+}
+
